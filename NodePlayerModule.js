@@ -48,6 +48,10 @@ class NodePlayerView extends Component {
     );
   }
 
+  componentWillUnmount() {
+    this.stop();
+  }
+
   render() {
     return <RCTNodePlayer
       {...this.props}
