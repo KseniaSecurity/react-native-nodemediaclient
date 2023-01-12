@@ -85,6 +85,10 @@
   [_np setCryptoKey:cryptoKey];
 }
 
+-(void)setRtspTransport:(NSString *)rtspTransport {
+  [_np setRtspTransport:rtspTransport];
+}
+
 -(int)start {
   return [_np start];
 }

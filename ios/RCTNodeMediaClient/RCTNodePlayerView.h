@@ -18,6 +18,7 @@
 @property (nonatomic) BOOL audioEnable;
 @property (strong, nonatomic) NSString *scaleMode;
 @property (strong, nonatomic) NSString *cryptoKey;
+@property (strong, nonatomic) NSString *rtspTransport;
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
 
 -(int)start;
