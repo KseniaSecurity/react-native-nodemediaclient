@@ -19,6 +19,8 @@ import javax.annotation.Nullable;
 
 import cn.nodemedia.react_native_nodemediaclient.RCTNodePlayerView;
 
+import cn.nodemedia.NodePlayer;
+
 public class NodePlayerViewManager extends ViewGroupManager<RCTNodePlayerView> {
 
 
@@ -80,6 +82,13 @@ public class NodePlayerViewManager extends ViewGroupManager<RCTNodePlayerView> {
     @ReactProp(name = "audioEnable")
     public void setAudioEnable(RCTNodePlayerView view, Boolean audioEnable) {
         view.setAudioEnable(audioEnable);
+    }
+
+    @ReactProp(name = "rtspTransport")
+    public void setRtspTransport(RCTNodePlayerView view, @Nullable String rtspTransport) {
+        if (rtspTransport == null)
+            rtspTransport = NodePlayer.RTSP_TRANSPORT_UDP;
+        view.setRtspTransport(rtspTransport);
     }
 
     @Nullable

@@ -77,6 +77,10 @@ public class RCTNodePlayerView extends NodePlayerView implements LifecycleEventL
     public void setAudioEnable(Boolean audioEnable){
         mNodePlayer.setAudioEnable(audioEnable);
     }
+    
+    public void setRtspTransport(String rtspTransport){
+        mNodePlayer.setRtspTransport(rtspTransport);
+    }
 
     public int pause() {
         return mNodePlayer.pause();
